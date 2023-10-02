@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+         
+                    <li>
+                        <a routerLink="Dashboard" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+                        
+                    </li>
+                    <li>
+                        <a routerLink="Dashboard/Cars" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Voitures</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Reservation</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                         
+                            <li>
+                                <a routerLink="Dashboard/Reservations/addReservations" class="nav-link px-0"> <span class="d-none d-sm-inline">Ajouter Reservation</span> </a>
+                            </li>
+                            <li>
+                                <a href="Dashboard/Reservations/updateReservations" class="nav-link px-0"> <span class="d-none d-sm-inline">Modifer</span> Reservation</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Client</span> </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown pb-4">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <span class="d-none d-sm-inline mx-1">FUHRER</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#">New Reservation</a></li>
+                        <li><a class="dropdown-item" href="#">Paramter de Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col py-3">
+            <nav class="navbar navbar-expand-lg navbar-light py-4">
+                <div class="container-fluid">
+            
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_lc"
+                    aria-controls="nav_lc" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="nav_lc">
+                    <ul class="d-none d-lg-flex navbar-nav mx-auto my-3 my-lg-0 position-absolute top-50 start-50 translate-middle">
+                      <li class="nav-item me-4"><a class="nav-link" routerLink="/Dashboard/Clients">Clients</a></li>
+                      <li class="nav-item me-4"><a class="nav-link" routerLink="Dashboard//Maintenances">Maintenances</a></li>
+                      <li class="nav-item"><a class="nav-link" routerLink="Dashboard/Cars">Voitures</a></li>
+                      <li class="nav-item"><a class="nav-link" routerLink="Dashboard/Users">Utilisateurs</a></li>
+                      <li class="nav-item"><a class="nav-link" routerLink="Dashboard/Reservations">Reservations</a></li>
+              
+                    </ul>
+              
+                  </div>
+                </div>
+              </nav>
+            
+            <router-outlet></router-outlet>
+    </div>
+  </div>
